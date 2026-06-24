@@ -12,7 +12,6 @@ import { clientHost, defaultPort, ensureStateDir, hostForUrl, serverLogFile, sta
 import { findPlaybook, listPlaybooks, playbookIds, PLAYBOOK_ROUTER_HELP } from "./playbooks.js";
 import { serve } from "./server.js";
 import { canonicalFile, sessionKey, SessionStore } from "./session-store.js";
-import { initDefaultTelemetry } from "./telemetry.js";
 
 const COMMANDS = new Set(["open", "poll", "end", "stop", "server", "playbook", "design", "setup"]);
 const DESCRIPTION =
@@ -27,45 +26,29 @@ export async function run(argv) {
   await ensureStateDir();
   const normalizedArgv = normalizeArgv(argv);
   const isTopLevelHelp = argv.length === 1 && argv[0] === "--help";
-  const command = telemetryCommandName(argv);
-  const telemetry = initDefaultTelemetry({
-    app: "lavish-axi",
+  await runAxiCli({
+    description: DESCRIPTION,
     version: VERSION,
-    platform: process.platform,
-    arch: process.arch,
+    argv: isTopLevelHelp ? [] : normalizedArgv,
+    topLevelHelp: TOP_LEVEL_HELP,
+    home: async () =>
+      createHomeOutput({
+        bin: process.argv[1] || "lavish-axi",
+        sessions: isTopLevelHelp ? [] : await visibleSessions(),
+        includeSessions: !isTopLevelHelp,
+      }),
+    commands: {
+      open: openCommand,
+      poll: pollCommand,
+      end: endCommand,
+      stop: stopCommand,
+      playbook: playbookCommand,
+      design: designCommand,
+      setup: setupCommand,
+      server: serverCommand,
+    },
+    getCommandHelp,
   });
-  telemetry.pageview(`/${command}`, { command });
-  try {
-    await runAxiCli({
-      description: DESCRIPTION,
-      version: VERSION,
-      argv: isTopLevelHelp ? [] : normalizedArgv,
-      topLevelHelp: TOP_LEVEL_HELP,
-      home: async () =>
-        createHomeOutput({
-          bin: process.argv[1] || "lavish-axi",
-          sessions: isTopLevelHelp ? [] : await visibleSessions(),
-          includeSessions: !isTopLevelHelp,
-        }),
-      commands: {
-        open: openCommand,
-        poll: pollCommand,
-        end: endCommand,
-        stop: stopCommand,
-        playbook: playbookCommand,
-        design: designCommand,
-        setup: setupCommand,
-        server: serverCommand,
-      },
-      getCommandHelp,
-    });
-    telemetry.track("command", { command, status: "success" });
-  } catch (error) {
-    telemetry.track("command", { command, status: "error" });
-    throw error;
-  } finally {
-    await telemetry.close(1_000);
-  }
 }
 
 export function collapseHomeDirectory(file, home) {
@@ -90,11 +73,6 @@ export function normalizeArgv(argv) {
     return argv.some((arg) => isHtmlPath(arg)) ? ["open", ...argv] : argv;
   }
   return ["open", ...argv];
-}
-
-export function telemetryCommandName(argv) {
-  const normalized = normalizeArgv(argv);
-  return normalized[0] && !normalized[0].startsWith("-") ? normalized[0] : "home";
 }
 
 export function createHomeOutput({ bin, sessions, includeSessions = true }) {
