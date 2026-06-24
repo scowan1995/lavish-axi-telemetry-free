@@ -28,6 +28,8 @@
 
 HTML is the new markdown. Lavish is the new editor for your HTML artifacts.
 
+This fork removes telemetry and other outbound monitoring from Lavish AXI.
+
 Agents are good at producing rich HTML artifacts, but the human-agent collaboration loop on such artifacts is lacking and falls back into screenshots and long responses for “tell me what to change.”
 That loses the thing HTML is best at: interactivity.
 
