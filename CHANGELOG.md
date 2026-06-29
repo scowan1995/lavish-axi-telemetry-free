@@ -1,5 +1,61 @@
 # Changelog
 
+## [0.1.33](https://github.com/scowan1995/lavish-axi-telemetry-free/compare/lavish-axi-v0.1.32...lavish-axi-v0.1.33) (2026-06-29)
+
+
+### Features
+
+* add input feedback controls ([#17](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/17)) ([8eda036](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/8eda036cfd6604823fad4945f9970b32a40e520a))
+* add layout audit curtain gate ([#97](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/97)) ([0fa3968](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/0fa3968fdf1f7184f52a8d5eb6eeeccc106b46cb))
+* **chrome:** align editor chrome with v2 UI ([#63](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/63)) ([da6c19e](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/da6c19ec4882024a55333adc83ca481ec16d09c8))
+* **cli:** add artifact guidance playbooks ([#12](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/12)) ([b13f033](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/b13f033973f91935af97e0688574a0767e66463b))
+* **cli:** add GitHub Copilot CLI session start hook support ([#106](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/106)) ([0b3e28e](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/0b3e28eae0a139540b7b274293cea98d49961dc4))
+* **cli:** add Lavish playbook routing guidance ([#99](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/99)) ([03cb069](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/03cb0696ed1c5069db8b464e7299fd87098b1fff))
+* **cli:** add server shutdown controls ([#54](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/54)) ([33c5b45](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/33c5b4549693d7c8fb5ca8dc59595dcf9377b4cd))
+* **cli:** broaden plan playbook guidance ([#52](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/52)) ([aa533c4](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/aa533c42c77a696ac0817402688b17cf29c5bdd5))
+* **cli:** expose SDK self-update command ([#110](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/110)) ([26473c7](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/26473c72e715986cee7130dfea8402007fc9e522))
+* **cli:** guide agents to combine relevant playbooks ([#73](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/73)) ([d0c6e47](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/d0c6e47d9eaed2efb40c0a14a152ffb8f602900e))
+* **cli:** improve AXI home guidance ([#4](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/4)) ([70b5a30](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/70b5a30bd2c0cadb97068fa79da316db4a6895ec))
+* **cli:** inject packaged design assets ([#16](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/16)) ([2eb6170](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/2eb61706823257a677bd8490e97bfe20a98080fa))
+* initial commit ([7f1fc95](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/7f1fc957f9d24a5ebae38fdfe43ad3cb717929b7))
+* rename diff playbook to code ([#85](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/85)) ([0e3487f](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/0e3487f3bd95ca9a1902fb1dfbb462c7d218fe44))
+* report browser layout warnings through poll ([#95](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/95)) ([4809102](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/480910213eb2f12d2c4c514ee4a5c1f03ce1655f))
+* send on Enter in chat input and annotation card ([#58](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/58)) ([e88679f](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/e88679f6a02a3ba4fdd6424d569e34f919025077))
+* **server:** configurable bind address and link hostname ([#61](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/61)) ([4bbdafd](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/4bbdafd3dc41233540b07e034359973506bef6d9))
+* **skills:** add Hermes metadata to lavish skill ([#82](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/82)) ([e634c23](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/e634c232ec64e97be2643b33235d3fe4c39eb6b8))
+* **skills:** add installable Lavish agent skill ([#59](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/59)) ([5f7cb2e](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/5f7cb2e4263220ff38f63117ae6293616278fdf6))
+* **skill:** support /lavish invocation ([#67](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/67)) ([cd87b1f](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/cd87b1f057848b1114ad414e99c27808ad044222))
+* support text range annotations ([#10](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/10)) ([dd0ed5c](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/dd0ed5c1340e945ddd33ebb66317b5e28c78f3e6))
+* sync lavish design skill to v2 ([#65](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/65)) ([d9cfc9d](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/d9cfc9d42ae8a7875626878d10711cd20f23f2af))
+
+
+### Bug Fixes
+
+* Add Ctrl+Enter immediate-send shortcut to the annotation card ([#71](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/71)) ([9922767](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/9922767ca7f7eb5e4bec02345464fcf107fab42c))
+* allow native form controls during annotation ([#56](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/56)) ([e355502](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/e355502fb312620108c2dcd38b4280a23e9e27e1))
+* clarify artifact design system guidance ([#89](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/89)) ([6486407](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/64864071f739344e3c148e4d570430e0495de586))
+* **cli:** improve poll and design guidance ([#74](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/74)) ([302efac](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/302efac1c73e486a01486dd394bc49f79fd8ae7b))
+* **cli:** make interrupted poll guidance reliable ([#76](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/76)) ([1a01e26](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/1a01e2603a545bea773e5126beb653ba84d1a8b5))
+* **cli:** prioritize project design guidance ([#50](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/50)) ([ee782c0](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/ee782c04d737d888f9f3b3bae1916137d791516b))
+* **cli:** require explicit agent hook setup ([#46](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/46)) ([4a250b8](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/4a250b843edbe4204599526c753bc94b798c9785))
+* **cli:** require polling before user replies ([#33](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/33)) ([c23c86c](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/c23c86c499cd16d7cf23ee7d48dca8ee7b74f174))
+* **cli:** restart stale servers after upgrades ([#6](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/6)) ([d473557](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/d4735576a0fb3933304a4c1394195b512d60ccda))
+* editor chrome refresh ([#2](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/2)) ([68caaef](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/68caaef46fadf767ed70bf215a5fe9bda44b3190))
+* harden feedback polling and queued prompts ([#41](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/41)) ([ec1e664](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/ec1e6643533a01f93389532d382897b0451201ee))
+* ignore changelog in prettier checks ([c18d955](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/c18d955af9cf3892150fc207be783c1b0bc90a74))
+* improve Lavish design fallback guidance ([#78](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/78)) ([db9f294](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/db9f2943a19ef626ccc233d7b4d66dafdf52cc51))
+* keep Lavish artifacts portable by default ([#40](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/40)) ([6dc80bc](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/6dc80bc6d411a19c48d14444d8aa2a13afdaf58f))
+* let summary controls toggle in annotation mode ([#100](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/100)) ([3eb70c6](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/3eb70c6e8ccdcdbc725b5d282327b0cc08dd1868))
+* metadata ([0ac6980](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/0ac698092c94c0f7c91011ad58db2ddfe673a680))
+* preserve artifact scroll on hot reload ([#48](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/48)) ([81599a1](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/81599a1f70ff08732b4a809e8634f5f4942b9d3b))
+* **server:** prevent live reload watcher stalls ([#38](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/38)) ([cc1c841](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/cc1c8411d3410b591fd5d1de945ba93c889af0e7))
+* **server:** track agent presence across polling states ([#31](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/31)) ([351d7b4](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/351d7b4174fb4f64b7683ea85a93537ecbb33ad3))
+* **skills:** hide internal agent skills from discovery ([#80](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/80)) ([a4bd520](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/a4bd520bbbda62a06de6a8c592cd5aebdc5ef055))
+* supersede unsent input choices ([#92](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/92)) ([352dd0d](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/352dd0d91d00f7914e23282b4b036eaa1ba7ecd2))
+* support local artifact assets in hidden directories ([#44](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/44)) ([2528e8e](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/2528e8e571cfd0ed299be842df9943c56868f4ac))
+* trigger release ([9bbf27f](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/9bbf27fe77f0e8baa656b577e27fc536d3c7474a))
+* upgrade axi js sdk ([#14](https://github.com/scowan1995/lavish-axi-telemetry-free/issues/14)) ([dfb07f8](https://github.com/scowan1995/lavish-axi-telemetry-free/commit/dfb07f8862867f07e907c5ad975e14738c0992b2))
+
 ## [0.1.32](https://github.com/kunchenguid/lavish-axi/compare/lavish-axi-v0.1.31...lavish-axi-v0.1.32) (2026-06-27)
 
 
