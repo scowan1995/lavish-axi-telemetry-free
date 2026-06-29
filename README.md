@@ -90,7 +90,7 @@ npm install -g lavish-axi
 lavish-axi setup hooks
 ```
 
-This installs a `SessionStart` hook for **Claude Code**, **Codex**, and **OpenCode** that surfaces open sessions, visualization playbooks, and usage guidance at the start of each session.
+This installs a `SessionStart` hook for **Claude Code**, **Codex**, **OpenCode**, and **GitHub Copilot CLI** that surfaces open sessions, visualization playbooks, and usage guidance at the start of each session.
 Unlike the skill, the hook also shows your live open sessions, so a fresh agent session can resume an in-flight review.
 **Restart your agent session after running this** so the new hook takes effect.
 
@@ -163,13 +163,14 @@ pnpm link
 | Command                       | Description                                                                                                                                                                 |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `lavish-axi`                  | Show current sessions and usage guidance.                                                                                                                                   |
+| `lavish-axi update`           | Check for or apply the latest npm release through the AXI SDK self-updater.                                                                                                 |
 | `lavish-axi <html-file>`      | Open or resume a Lavish Editor session, with the open-time layout gate enabled by default.                                                                                  |
 | `lavish-axi poll <html-file>` | Long-poll until the user sends feedback, ends the session, or the browser reports fresh `layout_warnings`; leave no-timeout polls running, or re-run them if interrupted.   |
 | `lavish-axi end <html-file>`  | End a session.                                                                                                                                                              |
 | `lavish-axi stop`             | Shut down the background server.                                                                                                                                            |
 | `lavish-axi playbook [id]`    | List focused artifact guidance or show one playbook; agents must open each matching playbook before writing HTML.                                                           |
 | `lavish-axi design`           | Show the Tailwind + DaisyUI CDN fallback, content-to-playbook router, Mermaid diagram tooling, `luxury` default theme, DaisyUI `@apply` warning, and layout safety snippet. |
-| `lavish-axi setup hooks`      | Install or repair optional SessionStart hooks for Claude Code, Codex, and OpenCode; restart the agent session afterward.                                                    |
+| `lavish-axi setup hooks`      | Install or repair optional SessionStart hooks for Claude Code, Codex, OpenCode, and GitHub Copilot CLI; restart the agent session afterward.                                |
 | `lavish-axi server`           | Run the local Lavish Editor server.                                                                                                                                         |
 
 Known playbook IDs: `diagram`, `table`, `comparison`, `plan`, `code`, `input`, `slides`.
@@ -182,6 +183,7 @@ For flows, architecture, state, or sequence diagrams, open the diagram playbook 
 | ------------------------ | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `lavish-axi <html-file>` | `--no-open`           | Ensure the server/session exists without opening another browser window.                                                                                                                                                            |
 | `lavish-axi <html-file>` | `--no-gate`           | Skip the open-time layout curtain for this browser open.                                                                                                                                                                            |
+| `lavish-axi update`      | `--check`             | Report current vs latest npm version without installing an update.                                                                                                                                                                  |
 | `lavish-axi poll`        | `--agent-reply "..."` | Show the agent's reply in the existing browser chat before polling again.                                                                                                                                                           |
 | `lavish-axi poll`        | `--timeout-ms <ms>`   | Test/debug escape hatch only; agents should normally omit it and leave the long poll running.                                                                                                                                       |
 | `lavish-axi stop`        | `--port <port>`       | Shut down a server running on a non-default port.                                                                                                                                                                                   |
